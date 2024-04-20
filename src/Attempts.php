@@ -15,8 +15,8 @@ final readonly class Attempts
     public function matches(): bool
     {
         $t = 0;
-        while ($t < $this->max && $this->diff->number() !== 0) {
-            $t++;
+        while ($t <= $this->max && $this->diff->number() !== 0) {
+            ++$t;
         }
         return $t < $this->max;
     }

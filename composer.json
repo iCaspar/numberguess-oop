@@ -1,5 +1,5 @@
 {
-    "name": "caspar/elegant",
+    "name": "caspar/numberguess",
     "type": "project",
     "authors": [
         {
@@ -17,12 +17,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Elegant\\": "src/"
+            "Numberguess\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Elegant\\": "tests/unit/"
+            "Numberguess\\": "tests/unit/"
         }
     }
 }

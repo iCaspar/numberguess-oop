@@ -8,16 +8,15 @@ final readonly class Attempts
 {
     public function __construct(
         private VerboseDiff $diff,
-        private int $max
+        private Count $count
     ) {
     }
 
     public function matches(): bool
     {
-        $t = 0;
-        while ($t < $this->max && $this->diff->number() !== 0) {
-            $t++;
+        while ($this->count->valid() && $this->diff->number() !== 0) {
+            $this->count->next();
         }
-        return $t < $this->max;
+        return $this->count->valid();
     }
 }

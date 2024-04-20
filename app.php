@@ -7,20 +7,20 @@ use Numberguess\Diff;
 use Numberguess\Farewell;
 use Numberguess\Guess;
 use Numberguess\Secret;
+use Numberguess\Count;
 use Numberguess\VerboseDiff;
 
 require_once 'vendor/autoload.php';
 
-$secret = new Secret();
 (new Farewell(
     new Attempts(
         new VerboseDiff(
             new Diff(
-                $secret,
+                $secret = new Secret(),
                 new Guess()
             )
         ),
-        5
+        new Count(5)
     ),
     $secret
 )

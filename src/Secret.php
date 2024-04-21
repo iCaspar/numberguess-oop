@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Numberguess;
 
@@ -10,11 +8,13 @@ final readonly class Secret
 
     public function __construct()
     {
-        $this->number = rand(1, 100);
     }
 
     public function number(): int
     {
+        if (! isset($this->number)) {
+            $this->number = rand(1, 100);
+        }
         return $this->number;
     }
 }

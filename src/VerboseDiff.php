@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Numberguess;
 
-final readonly class VerboseDiff
+final readonly class VerboseDiff implements Number
 {
     public function __construct(
-        private Diff $diff
+        private Number $diff
     ) {
     }
 

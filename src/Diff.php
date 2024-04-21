@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Numberguess;
 
-final readonly class Diff
+final readonly class Diff implements Number
 {
     public function __construct(
         private Number $subtrahend,

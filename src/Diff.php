@@ -7,13 +7,13 @@ namespace Numberguess;
 final readonly class Diff
 {
     public function __construct(
-        private Secret $secret,
-        private Guess $guess
+        private Number $subtrahend,
+        private Number $minuend
     ) {
     }
 
     public function number(): int
     {
-        return $this->guess->number() - $this->secret->number();
+        return $this->minuend->number() - $this->subtrahend->number();
     }
 }

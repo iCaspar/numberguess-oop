@@ -2,7 +2,7 @@
 
 namespace Numberguess;
 
-final readonly class Secret
+final readonly class Secret implements Number
 {
     private int $number;
 

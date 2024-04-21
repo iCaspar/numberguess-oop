@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Numberguess;
 
-final readonly class Guess
+final readonly class Guess implements Number
 {
     public function number(): int
     {
